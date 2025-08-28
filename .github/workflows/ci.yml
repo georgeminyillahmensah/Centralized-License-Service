@@ -75,7 +75,7 @@ jobs:
 
       - name: Set up environment variables
         run: |
-          echo "${{ secrets.DEBUG }" >> $GITHUB_ENV
+          echo "${{ secrets.DEBUG }}" >> $GITHUB_ENV
           echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> $GITHUB_ENV
           echo "ALLOWED_HOSTS=localhost,127.0.0.1" >> $GITHUB_ENV
           echo "DB_ENGINE=django.db.backends.postgresql" >> $GITHUB_ENV
