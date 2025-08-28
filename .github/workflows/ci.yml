@@ -138,7 +138,7 @@ jobs:
           fail_ci_if_error: false
 
       - name: Upload coverage reports as artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: coverage-report-${{ matrix.python-version }}
           path: htmlcov/
@@ -212,7 +212,7 @@ jobs:
           safety check --json --output safety-report.json || true
 
       - name: Upload security reports as artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: security-reports
           path: |
@@ -284,7 +284,7 @@ jobs:
           curl -f http://localhost:8000/api/redoc/ || exit 1
 
       - name: Upload API schema as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: api-schema
           path: schema.yml
@@ -313,7 +313,7 @@ jobs:
           python -m build
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build-artifacts
           path: dist/
